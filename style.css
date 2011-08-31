@@ -1,0 +1,71 @@
+/*
+Theme Name:     Twenty Eleven Child
+Theme URI:      http: //example.com/
+Description:    Child theme for the Twenty Eleven theme 
+Author:         John Houser
+Author URI:     http: //example.com/about/
+Template:       twentyeleven
+Version:        1.0
+*/
+
+@import url("../twentyeleven/style.css");
+
+/* Structure CSS */
+
+body {
+	padding: 0 0;
+	background: #4d091e;
+}
+
+#page {
+	max-width: none;
+	background: #4d091e;
+}
+
+#branding {
+	border: none;
+	max-width: 1000px;
+	margin: auto;
+	background: url(./images/pattern.jpg);
+	padding-bottom: 0px;
+}
+
+#access {
+	margin: 0 auto;
+	background: #842f26;
+}
+
+#main {
+	max-width: 1000px;
+	margin: auto;
+}
+
+#primary {
+	background: #CCC;
+}
+
+#mercado {
+	height: 100px;
+	display: block;
+	background: #6b949f;
+}
+
+#wrap {
+	margin: auto;
+	max-width: 1000px;
+}
+
+/* Footer Style */
+
+#colophon {
+	background: #292929;
+	padding: 0 0 25px 0;
+}
+
+#site-generator {
+	background: #292929;
+	text-align: left;
+	border-top: none;
+	border-bottom: 15px solid #99401e;
+	padding: 1em 1em;
+}
