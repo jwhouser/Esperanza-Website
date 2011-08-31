@@ -30,6 +30,33 @@ body {
 	padding-bottom: 0px;
 }
 
+#branding img {
+	width: auto;
+}
+
+.headerbutton {
+	float:right;
+}
+
+.donatebutton {
+	margin: 10px 15px;
+	padding: 5px;
+	background: #ffcb3f;
+	border: 3px solid white;
+	font-weight: bold;
+}
+
+.espanol {
+	margin: 10px 15px;
+	padding: 8px;
+	background: #6b949f;
+	color: white;
+	font-weight: bold;
+}
+
+.fbbutton {
+}
+
 #access {
 	margin: 0 auto;
 	background: #842f26;
@@ -44,10 +71,43 @@ body {
 	background: #CCC;
 }
 
+#supplementary {
+	border-top: none;
+}
+
 #mercado {
-	height: 100px;
-	display: block;
+	min-height: 130px;
+	padding: 10px 15px 0px;
 	background: #6b949f;
+	font: "HelveticaNeue-CondensedBold";
+	color: #FFF;
+}
+
+#mercado img {
+	margin: 0px 15px;
+	border: 2px solid black;
+	float: left;
+
+}
+
+#mercadotext {
+	line-height: 22px;
+	margin: 10px 15px 0px;
+}
+
+#mercadotext h1 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#mercadotext a {
+	font-weight: bold;
+	color: white;
+	text-decoration: underline;
+}
+
+#mercadotext{
+
 }
 
 #wrap {
@@ -65,7 +125,7 @@ body {
 #site-generator {
 	background: #292929;
 	text-align: left;
-	border-top: none;
+	border-top: 1px solid #667;
 	border-bottom: 15px solid #99401e;
 	padding: 1em 1em;
 }

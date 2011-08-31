@@ -17,6 +17,16 @@
 	<footer id="colophon" role="contentinfo">
 		<div id="mercado">
 			<div id="wrap">
+				<div>
+					<img src="./wp-content/themes/twentyeleven-child/images/img1.jpg"></img>
+					<img src="./wp-content/themes/twentyeleven-child/images/img2.jpg"></img>
+					<img src="./wp-content/themes/twentyeleven-child/images/img3.jpg"></img>
+				</div>
+				<div id="mercadotext">
+					<h1 style="display:inline;">MERCADO LA PALOMA</h1>
+					<span style="display:block;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum vehicula velit in fermentum.</span>
+					<a href="http://www.mercadolapaloma.com/">LEARN MORE</a>
+				</div>
 			</div><!-- #wrap -->
 		</div><!-- #mercado -->
 		<div id="wrap">
