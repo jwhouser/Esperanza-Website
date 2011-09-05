@@ -48,6 +48,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -71,9 +73,12 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<div id="espbanner">
+<!-- wtf?   A closing img tag?!
 				<a href="#"><img src="./wp-content/themes/twentyeleven-child/images/header.jpg" ></img></a>
+-->
+				<div id="logo"><a href="/"><div id="logospan"></div></a></div>
 				<div class="headerbutton donatebutton">DONATE</div>
-				<div class="headerbutton espanol">ESPANOL</div>
+				<div class="headerbutton espanol"><div class="arrow_right"></div>ESPANOL<div class="arrow_left"></div></div>
 				<div class="headerbutton fbbutton"></div>
 			</div>
 			<nav id="access" role="navigation">
