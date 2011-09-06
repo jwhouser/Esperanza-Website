@@ -15,10 +15,11 @@ Version:        1.0
 body {
 	padding: 0 0;
 	background: #4d091e;
-	font-family: 'Open Sans', sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #page {
+	margin: 0px auto;
 	max-width: none;
 	background: #4d091e;
 }
@@ -41,7 +42,7 @@ body {
 
 .donatebutton {
 	margin: 10px 15px;
-        padding: 2px 10px 2px 10px;
+        padding: 6px 10px;
 	background: #ffcb3f;
 	border: 2px solid white;
 	font-weight: bold;
@@ -49,40 +50,136 @@ body {
 
 .espanol {
 	margin: 10px 15px;
-	padding: 4px 10px 4px 10px;
+	padding: 8px 10px;
 	background: #6b949f;
 	color: white;
 	font-weight: bold;
 }
 
 .fbbutton {
+	margin: 10px 15px;
+        padding: 6px 2px 0;
+	background: #ffcb3f;
+	border: 2px solid white;
 }
+
+/* Primary Menu */
 
 #access {
 	margin: 0 auto;
 	background: #9a2c21;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-transform: uppercase;
 }
 
-#access a{
-	line-height:.8em;
+#access a {
+	line-height:.9em;
 	vertical-align:middle;
 	padding: 30px 1.2125em;
 }
 
 #access li {
 	font-size: 18px;
+	width: 165px;
 }
 
+#access ul ul {
+	top: 5.5em;
+	left: 0;
+}
+
+#access ul ul ul {
+	left: 114%;
+	top: 0;
+}
+
+#access .menu .current_page_ancestor {
+	background: #F9F9F9;
+}
+
+#access .menu .current_page_ancestor a {
+	color: black;
+}
+
+#access .menu .current_page_item {
+	background: #F9F9F9;
+}
+
+#access .menu .current_page_item a {
+	color: black;
+}
+
+.menu{
+	margin-left: 1% !important;
+	margin-right: 1% !important;
+}
+
+/* Side-Menu */
+
+#side-menu-title {
+	width: 265px;
+	padding: 10px 10px;
+	background: #590419;
+	text-transform: uppercase;
+	color: #fcb239;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#side-menu {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#side-menu li {
+	text-align: left;
+	white-space: nowrap;
+}
+
+#side-menu a {
+	color: white;
+	padding: 2px 5px;
+}
+
+#side-menu a:hover {
+	background: #fdae37;
+	color: #5a0912;
+	text-decoration: none;
+}
+
+#side-menu .current-menu-item a{
+	background: #fdae37;
+	color: #5a0912;
+	font-weight: normal;
+}
+
+/* Main Content */
+
 #main {
-	max-width: 1000px;
+ 	max-width: 1000px;
 	margin: auto;
+        background: url(./images/pattern.jpg);
+	min-height:500px;
+	padding-top: 0;
+	padding-bottom: 20px;
+	overflow: auto;
+}
+
+#to_top {
+	font-size: 18px;
+	color: #5a0912;
+	position: absolute;
+	right: 0;
+	bottom; 0;
+	font-weight: bold;
 }
 
 /* This is the main area on the right */
 #primary {
 	background: #CCC;
 	float: right !important;
-	width: 680px !important;
+	width: 620px !important;
 	margin-right: 20px !important;
         border: 2px solid #ffcb3f;
 }
@@ -92,6 +189,18 @@ body {
 	float: left !important;
 	width: 200px !important;
 }
+
+#secondary .widget {
+	margin-left: 10px;
+}
+
+.left-sidebar #secondary {
+    float: left;
+    margin-left: 10px;
+    margin-right: 0;
+    width: 18.8%;
+}
+
 /* This is the footer widget area */
 #supplementary {
 	border-top: none;
@@ -102,7 +211,7 @@ body {
 
 #supplementary.two .widget-area {
 	float: left;
-	margin-right: 3.7%;
+	margin-right: 20px;
 	width: auto;
 }
 
@@ -161,11 +270,6 @@ body {
 	padding: 1em 1em;
 }
 
-.menu { 
-	text-transform: uppercase;
-	height:50px;
-}
-
 #espbanner{
 	height:100px;
 }
@@ -216,11 +320,6 @@ body {
 	background-position: 0px -5px;
 }
 
-.menu{
-	margin-left:5% !important;
-	margin-right:5% !important;
-}
-
 .widget{
 	background-color:#292929;
 	margin-left:20px;
@@ -229,13 +328,7 @@ body {
 	padding: 0 20px 20px;
 }
 
-#main{
-        background: url(./images/pattern.jpg);
-	min-height:500px;
-	padding-top:30px;
-	padding-bottom: 30px;
-	overflow: auto;
-}
+
 
 .widget-title{
         color: #fff;
@@ -248,17 +341,64 @@ body {
 }
 
 .widget_nav_menu {
-	width: 100px;
+	width: 130px;
+	margin-left: 0px;
 	float: left;
 	clear: none !important;
 	border-right: 1px solid #667;
 }
 
+.widget_nav_menu .widget-title {
+	font-weight: bold;
+}
+
 .widget_nav_menu a {
 	color: white;
+	font-weight: normal;
 }
-	
+
+.widget_nav_menu li{
+	text-align: left;
+}
+
 #logospan{
 	width:350px;
 	height:100px;
+}
+
+/* Footer Text Widget Style */
+.ft_title {
+	color: #fdb137;
+	font-weight: bold;
+}
+
+#text-3 {
+	margin: 0;
+}
+
+#text-3 .widget-title {
+	font-weight: bold;
+}
+
+#text-3 hr {
+	color: #667;
+	background-color: #667;
+	height: 1px;
+}
+
+#fbfollow {
+	padding: 0 10px 0 0;
+	font-weight: bold;
+	font-size: 18px;
+	float: left;
+}
+
+#fbfollow a {
+	color: white;
+}
+
+#fb_logo {
+	height: 32px;
+	width: 32px;
+	float: left;
 }

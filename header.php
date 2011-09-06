@@ -73,13 +73,10 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<div id="espbanner">
-<!-- wtf?   A closing img tag?!
-				<a href="#"><img src="./wp-content/themes/twentyeleven-child/images/header.jpg" ></img></a>
--->
 				<div id="logo"><a href="/"><div id="logospan"></div></a></div>
 				<div class="headerbutton donatebutton">DONATE</div>
 				<div class="headerbutton espanol"><div class="arrow_right"></div>ESPANOL<div class="arrow_left"></div></div>
-				<div class="headerbutton fbbutton"></div>
+				<div class="headerbutton fbbutton"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=209824579078042&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Esperanza-Community-Housing-Corporation/39274644856" send="false" width="100" show_faces="false" font=""></fb:like></div>
 			</div>
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
