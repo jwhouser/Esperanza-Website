@@ -22,6 +22,9 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			</div><!-- #content -->
+			<div id="to_top">
+				<a href="#">BACK TO TOP <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/red_triangle.png" /></a>
+			</div>
 		</div><!-- #primary -->
 <!-- Get Parent ID -->
 <?php

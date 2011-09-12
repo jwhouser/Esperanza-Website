@@ -53,6 +53,7 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<?php wp_enqueue_script('jquery'); ?>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -68,12 +69,21 @@
 	wp_head();
 ?>
 </head>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/scripts/nivoslider/nivo-slider.css" type="text/css" media="screen" />
+<!-- Include the Nivo Slider JS file -->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/nivoslider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<!-- Set up the Nivo Slider -->
+<script type="text/javascript">
+jQuery(window).load(function() {
+	jQuery('#slider').nivoSlider();
+});
+</script>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<div id="espbanner">
-				<div id="logo"><a href="/"><div id="logospan"></div></a></div>
+				<div id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div id="logospan"></div></a></div>
 				<div class="headerbutton donatebutton">DONATE</div>
 				<div class="headerbutton espanol"><div class="arrow_right"></div>ESPANOL<div class="arrow_left"></div></div>
 				<div class="headerbutton fbbutton"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=209824579078042&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Esperanza-Community-Housing-Corporation/39274644856" send="false" width="100" show_faces="false" font=""></fb:like></div>
@@ -86,27 +96,38 @@
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
-			<?php
-				// Check to see if the header image has been removed
-				$header_image = get_header_image();
-				if ( ! empty( $header_image ) ) :
-			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			
+			<!-- Check for Home page slideshow -->
+			
+			
+			<?php if ( is_home() ) : ?>
+			<?php else : ?>
 				<?php
-					// The header image
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
-							$image[1] >= HEADER_IMAGE_WIDTH ) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-					else : ?>
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-				<?php endif; // end check for featured image or standard header ?>
-			</a>
-			<?php endif; // end check for removed header image ?>
-
+					// Check to see if the header image has been removed
+					$header_image = get_header_image();
+					if ( ! empty( $header_image ) ) :
+				?>
+				<div id="image_header">
+	
+					<?php
+						// The header image
+						// Check if this is a post or page, if it has a thumbnail, and if it's a big one
+						if ( is_singular() &&
+								has_post_thumbnail( $post->ID ) &&
+								( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
+								$image[1] >= HEADER_IMAGE_WIDTH ) :
+							// Houston, we have a new header image!
+							echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+						else : ?>
+	
+						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />			
+					<?php endif; // end check for featured image or standard header ?>
+	
+				<div id="image_title"><?php echo get_the_title(); ?></div>
+				</div> <!-- Image Header -->	
+				<?php endif; // end check for removed header image ?>
+			<?php endif; ?> <!-- end check for homepage -->
+			<!-- Text hidden -->
 			<?php
 				// Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
@@ -119,7 +140,15 @@
 			?>
 				<?php // get_search_form(); ?>
 			<?php endif; ?>
-
+			
+	<!-- script for nivo slider -->		
+	<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
+	    <script type="text/javascript" src="../jquery.nivo.slider.pack.js"></script>
+	    <script type="text/javascript">
+	    $(window).load(function() {
+	        $('#slider').nivoSlider();
+	    });
+	</script>
 	</header><!-- #branding -->
 
 

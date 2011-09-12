@@ -114,10 +114,31 @@ body {
 	margin-right: 1% !important;
 }
 
+/* Slider */
+
+#slider .nivoslider {
+	display: block;
+}
+
+/* Header Image and Title */
+
+#image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 0px;
+	width: 975px;
+	padding: 2px 0 2px 25px;
+	font-size: 50px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 100%;
+}
+
 /* Side-Menu */
 
 #side-menu-title {
-	width: 265px;
+	width: 300px;
 	padding: 10px 10px;
 	background: #590419;
 	text-transform: uppercase;
@@ -132,9 +153,14 @@ body {
 	font-size: 16px;
 }
 
+#side-menu ul{
+	list-style: none;
+}
+
 #side-menu li {
 	text-align: left;
 	white-space: nowrap;
+	font-size: 16px;
 }
 
 #side-menu a {
@@ -167,21 +193,80 @@ body {
 }
 
 #to_top {
+	display: block;
 	font-size: 18px;
-	color: #5a0912;
-	position: absolute;
-	right: 0;
-	bottom; 0;
 	font-weight: bold;
+	margin: 15px 0;
+	padding: 0 35px 15px;
+	text-align: right;
+}
+
+#to_top a {
+	color: #5a0912;
+}
+/* Post Style */
+
+.entry-title, .entry-title a {
+	color: #b14014;
+	font-size: 24px;
+}
+
+.left-sidebar #content {
+	margin: 0 7.6% 0;
+	width: auto;
+}
+
+.commentlist {
+	margin: 0 100px;
+}
+
+.singular .hentry {
+	padding: 0 0 0;
+}
+
+.singular .entry-meta .edit-link a {
+	bottom: auto;
+	left: 0px;
+	position: absolute;
+	right: auto;
+	top: 30px;
 }
 
 /* This is the main area on the right */
 #primary {
-	background: #CCC;
+	background: #FFF;
 	float: right !important;
 	width: 620px !important;
 	margin-right: 20px !important;
         border: 2px solid #ffcb3f;
+        word-wrap: break-word;
+}
+
+#content {
+	padding: 5% 0 0;
+	width: 85%;
+	overflow: auto;
+}
+
+#content img{
+	border: 3px solid #590417;
+	padding: 0;
+}
+
+.singular.page .hentry {
+	padding: 0;
+}
+
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+	width: 100%;
+}
+
+.singular .entry-title {
+	color: #b14014;
+	font-size: 24px;
+	border-bottom: 3px solid #b14014;
+	line-height: 24px;
+	padding-top: 0;
 }
 
 /* This is the menu on the left */
@@ -260,6 +345,7 @@ body {
 #colophon {
 	background: #292929;
 	padding: 0 0 25px 0;
+	list-style: url(./images/gold_triangle.png) inside !important;
 }
 
 #site-generator {
@@ -357,8 +443,15 @@ body {
 	font-weight: normal;
 }
 
+.widget_nav_menu ul li {
+	border-top: solid 1px;
+	padding: 5px;
+	list-style: url(./images/gold_triangle.png) inside !important;
+}
+
 .widget_nav_menu li{
 	text-align: left;
+	vertical-align: middle;
 }
 
 #logospan{
