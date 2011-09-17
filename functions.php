@@ -8,4 +8,8 @@ function remove_home( $args ) {
 	return $args;
 }
 add_action('after_setup_theme', 'remove_home');
+
+register_sidebar(array(	'name' => 'Home Sidebar',
+			'id' => 'sidebar-6'));
+
 ?>
