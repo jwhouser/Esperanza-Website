@@ -69,23 +69,24 @@
 	wp_head();
 ?>
 </head>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/scripts/nivoslider/nivo-slider.css" type="text/css" media="screen" />
-<!-- Include the Nivo Slider JS file -->
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/scripts/nivoslider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-<!-- Set up the Nivo Slider -->
-<script type="text/javascript">
-jQuery(window).load(function() {
-	jQuery('#slider').nivoSlider();
-});
-</script>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<div id="espbanner">
 				<div id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div id="logospan"></div></a></div>
-				<div class="headerbutton donatebutton">DONATE</div>
-				<div class="headerbutton espanol"><div class="arrow_right"></div>ESPANOL<div class="arrow_left"></div></div>
+				<div class="headerbutton donatebutton"><a href="<?php echo esc_url( home_url( '/' ) ); ?>?page_id=3076">DONATE</a></div>
+				<div class="headerbutton espanol">
+					<div id="google_translate_element"></div><script>
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({
+					    pageLanguage: 'en',
+					    includedLanguages: 'en,es',
+					    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+					  }, 'google_translate_element');
+					}
+					</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				</div>
 				<div class="headerbutton fbbutton"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=209824579078042&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Esperanza-Community-Housing-Corporation/39274644856" send="false" width="100" show_faces="false" font=""></fb:like></div>
 			</div>
 			<nav id="access" role="navigation">
@@ -100,7 +101,8 @@ jQuery(window).load(function() {
 			<!-- Check for Home page slideshow -->
 			
 			
-			<?php if ( is_home() ) : ?>
+			<?php if ( is_front_page()): ?>
+				<?php dynamic_content_gallery(); ?>
 			<?php else : ?>
 				<?php
 					// Check to see if the header image has been removed
@@ -141,14 +143,6 @@ jQuery(window).load(function() {
 				<?php // get_search_form(); ?>
 			<?php endif; ?>
 			
-	<!-- script for nivo slider -->		
-	<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
-	    <script type="text/javascript" src="../jquery.nivo.slider.pack.js"></script>
-	    <script type="text/javascript">
-	    $(window).load(function() {
-	        $('#slider').nivoSlider();
-	    });
-	</script>
 	</header><!-- #branding -->
 
 

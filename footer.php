@@ -18,14 +18,14 @@
 		<div id="mercado">
 			<div id="wrap">
 				<div>
-					<img src="./wp-content/themes/twentyeleven-child/images/img1.jpg"></img>
-					<img src="./wp-content/themes/twentyeleven-child/images/img2.jpg"></img>
-					<img src="./wp-content/themes/twentyeleven-child/images/img3.jpg"></img>
+					<a href="http://www.mercadolapaloma.com/" target="_blank"><img src="./wp-content/themes/twentyeleven-child/images/img1.jpg"></img></a>
+					<a href="http://www.mercadolapaloma.com/" target="_blank"><img src="./wp-content/themes/twentyeleven-child/images/img2.jpg"></img></a>
+					<a href="http://www.mercadolapaloma.com/" target="_blank"><img src="./wp-content/themes/twentyeleven-child/images/img3.jpg"></img></a>
 				</div>
 				<div id="mercadotext">
-					<h1 style="display:inline;">MERCADO LA PALOMA</h1>
+					<a href="http://www.mercadolapaloma.com/" target="_blank"><h1 style="display:inline;">MERCADO LA PALOMA</h1></a>
 					<span style="display:block;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum vehicula velit in fermentum.</span>
-					<a href="http://www.mercadolapaloma.com/">LEARN MORE</a>
+					<a href="http://www.mercadolapaloma.com/" target="_blank">LEARN MORE</a>
 				</div>
 			</div><!-- #wrap -->
 		</div><!-- #mercado -->
@@ -40,7 +40,7 @@
 			<div id="site-generator">
 				<span> &#9400; 2001 - 2011 Esperanza Community Housing Corporation.  All rights Reserved | </span>
 				<?php do_action( 'twentyeleven_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator" target="_blank"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
 			</div><!-- #site-generator -->
 		</div><!-- #wrap -->
 	</footer><!-- #colophon -->
