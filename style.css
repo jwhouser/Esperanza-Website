@@ -222,7 +222,8 @@ body {
     min-height:500px;
     padding-top: 0;
     padding-bottom: 20px;
-    overflow: auto;
+    overflow-x: visible;
+    overflow-y: auto;
 }
 
 #to_top {
@@ -269,11 +270,171 @@ body {
     position: static;
 }
 
+/* Homepage Content */
+
+#home-wrap {
+	float: right !important;
+	width: 53% !important;
+	margin-top: 20px !important;
+	margin-right: 20px !important;
+}
+
+#primary-home {
+    background: #FFF;
+    border: 2px solid #ffcb3f;
+    word-wrap: break-word;
+    position: relative;
+}
+
+/* Homepage Calendar */
+
+#calendar-title {
+	width: 530px;
+	background: #6b949f;
+	padding-left: 20px;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 48px;
+	font-weight: 100;
+}
+
+.calendar-title-suffix {
+	font-weight: bold;
+}
+#content-home {
+	padding: 15px 15px 50px 15px;
+}
+
+#content-home ul {
+	list-style: none;
+	margin: 0;
+}
+
+#content-home ul li {
+	border-bottom: 2px solid #6b949f;
+	margin-bottom: 5px;
+	padding: 0 5px 5px;
+}
+
+#content-home .gce-list-title {
+	font-weight: bold;
+	font-size: 20px;
+	color: #4d091e;	
+	float: left;
+	margin-right: 10px;
+}
+
+#content-home .gce-page-list .gce-list .gce-list-event {
+	background: transparent;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#content-home .gce-page-list .gce-list .gce-list-event a {
+	color: black;
+	text-transform: uppercase;
+}
+
+#content-home .gce-desc a {
+	color: #99401e;
+}
+
+#calendar-all {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #F9B03F;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+#calendar-all a {
+	color: white;
+}
+/* Homepage Sidebar */
+
+#secondary-home {
+	float: left !important;
+	width: 40% !important;
+	margin: 0 0 0 20px;
+	padding-top: 20px;
+}
+
+#secondary-home li {
+	list-style: none;
+}
+
+#secondary-home .widget {
+	background-color:#292929;
+	color: #fff;
+	padding: 0;
+	width: auto;
+	margin-left: 0;
+}
+
+/* Homepage Featured Page Widget */
+
+#secondary-home .featured-post-widget {
+	height: 100px;
+}
+#secondary-home .featured-post-image {
+	border: none;
+	padding: 0;
+	margin-bottom: 0;
+	margin-right: 10px !important;
+	width: 100px;
+	height: 100px;
+}
+
+#secondary-home .featured-post-widget img {
+	border: none;
+	padding: 0;
+}
+
+#secondary-home .featured-post-widget h3 {
+	margin: 5px 0 0 0;
+	clear: none;
+}
+
+#secondary-home .featured-post-widget h3 a {
+	color: white;
+	text-transform: uppercase;
+}
+
+#secondary-home .featured_post_content {
+	padding-right: 10px;
+}
+
+#secondary-home .featured-post-widget p {
+	margin-bottom: 0;
+}
+
+#secondary-home .featured_post_more_link a {
+	color: white;
+	text-decoration: underline;
+}
+
+/* Homepage Text/Video Widget */
+
+#secondary-home .widget_text {
+	line-height: 0;
+}
+
+#secondary-home .widgettitle {
+	margin-left: 20px;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+}
+
 /* This is the main area on the right */
 #primary {
     background: #FFF;
     float: right !important;
-    width: 620px !important;
+    width: 56% !important;
     margin-right: 20px !important;
     border: 2px solid #ffcb3f;
     word-wrap: break-word;
@@ -311,21 +472,82 @@ body {
 	right: 0;
 }
 /* This is the menu on the left */
+
 #secondary {
     float: left !important;
-    width: 200px !important;
+    width: 38% !important;
+    margin-right: 20px;
 }
 
 #secondary .widget {
     margin-left: 10px;
+    width: auto;
 }
 
+#secondary .widget-title{
+	color: #fff;
+	font-size: 18px;
+    
+}
 .left-sidebar #secondary {
     float: left;
     margin-left: 10px;
     margin-right: 0;
     width: 18.8%;
 }
+
+/* Page Sidebar: Upcoming Events */
+
+#secondary .widget_gce_widget {
+	background: rgba(0, 0, 0, 0.3);
+	position: relative;
+	padding: 65px 15px 15px;
+}
+
+#secondary .widget_gce_widget h3 {
+	background: #6b949f;
+	margin-bottom: 10px;
+	padding: 5px;
+	width: 465px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 5;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 1em;
+	text-align: right;
+}
+
+#secondary .gce-list-title {
+	font-weight: bold;
+	font-size: 16px;
+	color: #4d091e;	
+	float: left;
+	margin-right: 10px;
+}
+
+#secondary .gce-widget-list {
+	background: white;
+	padding: 10px;
+	border: 2px solid #ffcb3f;
+}
+
+#secondary .widget_gce_widget .gce-widget-list .gce-list .gce-list-event {
+	background: transparent;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#secondary .widget_gce_widget .gce-widget-list .gce-list .gce-list-event a {
+	color: black;
+	text-transform: uppercase;
+}
+
+#secondary .widget_gce_widget .gce-widget-list .gce-list .gce-desc a {
+	color: #99401e;
+}
+
 
 /* This is the footer widget area */
 #supplementary {

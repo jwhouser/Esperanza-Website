@@ -14,16 +14,18 @@
 
 get_header(); ?>
 
-		<div id="primary">
+	<div id="home-wrap">
 
-			<div id="calender_title">UPCOMING EVENTS</div>
-			<div id="content_home" role="main">
+		<div id="calendar-title">UPCOMING <span class="calendar-title-suffix">EVENTS</span></div>
+		<div id="primary-home">
+			<div id="content-home" role="main">	
+	
+			<?php echo do_shortcode('[google-calendar-events id="1, 3" type="list" title="" max="5"]'); ?>
 			
-
-			<?php echo do_shortcode('[google-calendar-events id="1, 3" type="list" title="Events on" max="10"]'); ?>
-
 			</div><!-- #content -->
+			<div id="calendar-all"><a href="#">SEE ALL</a></div>
 		</div><!-- #primary -->
-		
+	</div><!-- #home-wrap -->
+	
 <?php get_sidebar('home'); ?>
 <?php get_footer(); ?>

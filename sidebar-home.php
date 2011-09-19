@@ -8,7 +8,7 @@
  */
 
 ?>
-		<div id="secondary" class="widget-area" role="complementary">
+		<div id="secondary-home" class="widget-area" role="complementary">
 
 			<?php if ( !function_exists('dynamic_sidebar') ||
 			           !dynamic_sidebar('Home Sidebar') ) : ?>
